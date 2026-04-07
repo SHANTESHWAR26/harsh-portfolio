@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Kumar Singh | Advocate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --navy: #0f172a; --gold: #c5a059; }
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        html { scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)); }
+        
+        /* Modal & WhatsApp Styles */
+        .modal { transition: opacity 0.25s ease; z-index: 3000; }
+        body.modal-active { overflow: hidden; }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); color: white; }
+        
+        /* Service List Grid */
+        .service-item { border-bottom: 1px solid #f1f5f9; padding: 8px 0; display: flex; align-items: center; }
+        .service-item i { color: var(--gold); font-size: 10px; margin-right: 10px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans modal-active">
+
+    <div id="disclaimer-modal" class="fixed inset-0 w-full h-full flex items-center justify-center z-[5000] p-4">
+        <div class="absolute inset-0 bg-slate-900/95 backdrop-blur-sm"></div>
+        <div class="relative bg-white max-w-2xl w-full rounded-lg shadow-2xl p-8 text-center overflow-hidden">
+            <div class="mb-6">
+                <i class="fas fa-balance-scale text-5xl text-gold mb-4"></i>
+                <h3 class="text-2xl font-serif font-bold text-slate-900 uppercase">Disclaimer</h3>
+            </div>
+            <div class="text-slate-600 text-sm leading-relaxed text-left mb-8 space-y-4 max-h-60 overflow-y-auto pr-2">
+                <p>As per the rules of the Bar Council of India, we are not permitted to solicit work and advertise. By visiting this website, the user acknowledges that the information provided on this website is solely available for informational purposes only sought to be voluntarily gained by him/her and is neither soliciting nor advertisement.</p>
+                <p>Further, the information provided on this website is accessed by the user's own volition, and any transmission, receipt or use of this information available on this website does not create any liability or any relationship with Harsh Kumar Singh, Advocate.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <button onclick="closeDisclaimer()" class="bg-slate-900 text-white px-12 py-3 font-bold uppercase tracking-widest hover:bg-gold transition-all duration-300">Agree</button>
+                <a href="https://www.google.com" class="border border-slate-300 text-slate-500 px-12 py-3 font-bold uppercase tracking-widest hover:bg-slate-50 transition-all duration-300 text-center">Disagree</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/918840384515?text=Hello%20Advocate%20Harsh,%20I%20would%20like%20to%20consult%20regarding..." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md text-white border-b border-gold/30">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-serif font-bold tracking-tighter uppercase">Harsh Kumar Singh & Associates</span>
+            <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest">
+                <a href="#home" class="hover:text-gold transition">Home</a>
+                <a href="#about" class="hover:text-gold transition">Profile</a>
+                <a href="#services" class="hover:text-gold transition">Services</a>
+                <a href="#experience" class="hover:text-gold transition">Experience</a>
+                <a href="#gallery" class="hover:text-gold transition">Gallery</a>
+                <a href="#blog" class="hover:text-gold transition">Blog</a>
+                <a href="#contact" class="hover:text-gold transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 z-0">
+            <img src="harsh1 (2).jpeg" alt="Advocate Harsh Kumar Singh" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 text-center px-6">
+            <h2 class="text-gold uppercase tracking-[0.3em] font-bold mb-4 animate-fade-in">Chamber of </h2>
+            <h1 class="text-5xl md:text-8xl text-white font-serif font-bold mb-6">Harsh Kumar Singh</h1>
+            <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto italic mb-10">
+                Specializing in Supreme Court Litigation, Criminal Defense, and Civil Law.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-gold text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all">Consultation</a>
+                <a href="#services" class="border border-white text-white px-10 py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all">Legal Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <img src="harsh1 (3).jpeg" alt="Harsh Kumar Singh Advocate Profile" class="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                <div class="absolute -bottom-6 -right-6 bg-gold p-8 hidden md:block">
+                    <p class="text-white font-serif text-2xl italic">"Analytical & Detail-Oriented"</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-gold font-bold uppercase tracking-widest mb-2">The Advocate</h3>
+                <h2 class="text-4xl font-serif font-bold mb-6">Professional Profile</h2>
+                <p class="text-slate-600 leading-relaxed mb-6 text-lg">
+                    Based in Noida and practicing within the Delhi legal circuit, I bring a detail-oriented approach to complex litigation. My expertise spans across government litigation, public law, and specialized land disputes.
+                </p>
+                <div class="grid grid-cols-2 gap-6 border-t border-slate-200 pt-8">
+                    <div><h4 class="font-bold text-slate-900">Experience</h4><p class="text-slate-500">Supreme Court & High Court</p></div>
+                    <div><h4 class="font-bold text-slate-900">Specialization</h4><p class="text-slate-500">Criminal & Civil Law</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif font-bold mb-4 italic">Legal Services</h2>
+            <div class="h-1 w-24 bg-gold mx-auto mb-12"></div>
+            
+            <div class="max-w-sm mx-auto group cursor-pointer" onclick="toggleModal('services-modal')">
+                <div class="bg-slate-50 p-12 rounded-full border-2 border-gold/20 group-hover:border-gold group-hover:bg-slate-900 transition-all duration-500 mb-6">
+                    <i class="fas fa-gavel text-6xl text-gold"></i>
+                </div>
+                <h3 class="text-2xl font-serif font-bold mb-2">Practice Areas</h3>
+                <p class="text-slate-500 uppercase tracking-widest text-xs font-bold">Click to view all services</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="services-modal" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+        <div class="absolute w-full h-full bg-slate-900/95" onclick="toggleModal('services-modal')"></div>
+        <div class="bg-white w-11/12 md:max-w-5xl mx-auto rounded-lg shadow-2xl z-[3001] overflow-hidden">
+            <div class="bg-slate-900 p-6 flex justify-between items-center border-b border-gold/30">
+                <h3 class="text-2xl font-serif font-bold text-white uppercase tracking-tighter">Our Legal Services</h3>
+                <button onclick="toggleModal('services-modal')" class="text-gold text-3xl hover:text-white transition">&times;</button>
+            </div>
+            <div class="p-8 overflow-y-auto max-h-[75vh]">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-2 text-sm">
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Arbitration</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Banking & Finance</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Civil Rights / Human Rights</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Constitutional Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Commercial Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Company Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Competition Law/Anti Trust Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Consumer Laws</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Contract Act</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Crime against SC & ST</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Crime against Women</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Criminal Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Equity Capital Markets</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Educational Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Entertainment and Media Laws</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Environmental Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Family Law/Inheritance</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Immigration Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Income Tax</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Indirect Tax</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Insurance Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Narcotic Drugs (NDPS)</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Labour and Employment</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> International Trade</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Telecommunication Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Technology Transfer & TMT</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> International Client Services</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Matrimonial Laws</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Partnership Act</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Private Equity</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Property Law</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Restructuring & Insolvency</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Real Estate</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> SARFAESI</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Technology and Data Privacy</div>
+                    <div class="service-item"><i class="fas fa-chevron-right"></i> Trademark & I. P. Law</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="gallery" class="py-24 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold mb-4">Litigation Presence</h2>
+                <div class="h-1 w-24 bg-gold mx-auto"></div>
+                <p class="mt-4 text-slate-400">Professional moments at the Supreme Court of India.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="group relative overflow-hidden rounded-lg h-96">
+                    <img src="harsh1 (1).jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><span class="border-2 border-white px-6 py-2 uppercase tracking-widest">In Court</span></div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg h-96">
+                    <img src="harsh1 (2).jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><span class="border-2 border-white px-6 py-2 uppercase tracking-widest">Supreme Court</span></div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg h-96">
+                    <img src="harsh1 (3).jpeg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><span class="border-2 border-white px-6 py-2 uppercase tracking-widest">Delhi Chambers</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl text-center">
+            <h2 class="text-4xl font-serif font-bold mb-16 underline decoration-gold underline-offset-8">Career Milestones</h2>
+            <div class="space-y-12 text-left">
+                <div class="border-l-4 border-gold pl-8 relative">
+                    <div class="absolute w-4 h-4 bg-gold rounded-full -left-[10px] top-0"></div>
+                    <span class="text-sm font-bold text-gold">Dec 2024 – May 2025</span>
+                    <h3 class="text-2xl font-bold mt-1">Chamber of Pankaj Vivek</h3>
+                    <p class="text-slate-500 mb-2">Specializing in Land Dispute Matters & Property Rights.</p>
+                </div>
+                <div class="border-l-4 border-gold pl-8 relative">
+                    <div class="absolute w-4 h-4 bg-gold rounded-full -left-[10px] top-0"></div>
+                    <span class="text-sm font-bold text-gold">Dec 2023 – Sep 2024</span>
+                    <h3 class="text-2xl font-bold mt-1">Supreme Court of India Experience</h3>
+                    <p class="text-slate-500">Hands-on experience in constitutional writs and litigation under Akbar Siddique (AOR).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-24 bg-slate-50 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif font-bold mb-4">Legal Blog</h2>
+            <div class="h-1 w-24 bg-gold mx-auto mb-16"></div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+                <div class="bg-white p-8 shadow-md border-t-4 border-gold hover:shadow-xl transition">
+                    <span class="text-gold text-xs font-bold uppercase tracking-widest">Legal Insights</span>
+                    <h3 class="text-xl font-bold mt-2 mb-4">Navigating Land Disputes in Delhi/NCR</h3>
+                    <button onclick="toggleModal('blog-modal-1')" class="text-navy font-bold text-xs uppercase tracking-widest hover:text-gold transition">Read More +</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="blog-modal-1" class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+        <div class="absolute w-full h-full bg-slate-900 opacity-80" onclick="toggleModal('blog-modal-1')"></div>
+        <div class="bg-white w-11/12 md:max-w-2xl mx-auto rounded shadow-2xl z-[2001] overflow-y-auto max-h-[85vh] p-8">
+            <div class="flex justify-between items-center border-b pb-4">
+                <h3 class="text-2xl font-serif font-bold text-slate-900">Land Disputes & Property Rights</h3>
+                <button onclick="toggleModal('blog-modal-1')" class="text-3xl hover:text-gold">&times;</button>
+            </div>
+            <div class="mt-6 text-slate-700 leading-relaxed space-y-4 italic">
+                <p>Legal insights on property verification and litigation strategy in real estate disputes across Noida and Delhi.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="py-24 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold italic mb-4">Establish Contact</h2>
+                <div class="h-1 w-24 bg-gold mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="p-6 bg-white shadow-md border-l-4 border-gold">
+                        <i class="fas fa-phone text-2xl text-gold mb-3"></i>
+                        <p class="font-bold">Call</p><p class="text-slate-600">8840384515</p>
+                    </div>
+                    <div class="p-6 bg-white shadow-md border-l-4 border-gold">
+                        <i class="fas fa-envelope text-2xl text-gold mb-3"></i>
+                        <p class="font-bold">Email</p><p class="text-slate-600 break-words text-xs uppercase">adv.harshkumarsingh7872@outlook.com</p>
+                    </div>
+                    <div class="p-6 bg-white shadow-md border-l-4 border-gold">
+                        <i class="fas fa-map-marker-alt text-2xl text-gold mb-3"></i>
+                        <p class="font-bold">Location</p><p class="text-slate-600">Sector-118, Noida. U.P</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 shadow-xl rounded-lg">
+                    <h3 class="text-xl font-serif font-bold mb-6 border-b pb-2">Book a Consultation</h3>
+                    <form onsubmit="sendToWhatsApp(event)" class="space-y-4">
+                        <input type="text" id="form-name" placeholder="Your Name" required class="w-full p-3 bg-slate-50 border border-slate-200 outline-none focus:border-gold">
+                        <input type="tel" id="form-phone" placeholder="Contact Number" required class="w-full p-3 bg-slate-50 border border-slate-200 outline-none focus:border-gold">
+                        <input type="email" id="form-email" placeholder="Email Address" required class="w-full p-3 bg-slate-50 border border-slate-200 outline-none focus:border-gold">
+                        <textarea id="form-purpose" placeholder="Purpose of Consultation" rows="4" required class="w-full p-3 bg-slate-50 border border-slate-200 outline-none focus:border-gold"></textarea>
+                        <button type="submit" class="w-full bg-slate-900 text-white py-3 font-bold uppercase tracking-widest hover:bg-gold transition duration-300">Submit to WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-900 text-white border-t border-gold/20 text-center">
+        <p class="uppercase tracking-widest text-xs opacity-60 italic">&copy; 2026 Harsh Kumar Singh | Delhi Bar Council</p>
+    </footer>
+
+    <script>
+        // Disclaimer Logic
+        function closeDisclaimer() {
+            document.getElementById('disclaimer-modal').style.display = 'none';
+            document.body.classList.remove('modal-active');
+        }
+
+        // Modal Toggling
+        function toggleModal(modalID) {
+            const modal = document.getElementById(modalID);
+            modal.classList.toggle('opacity-0');
+            modal.classList.toggle('pointer-events-none');
+            document.body.classList.toggle('modal-active');
+        }
+
+        // WhatsApp Form Logic
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const phone = document.getElementById('form-phone').value;
+            const email = document.getElementById('form-email').value;
+            const purpose = document.getElementById('form-purpose').value;
+
+            const text = `*New Consultation Inquiry*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Purpose:* ${purpose}`;
+            window.open(`https://wa.me/918840384515?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
